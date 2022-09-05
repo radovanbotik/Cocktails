@@ -37,10 +37,14 @@ h2 {
 }
 h4 {
   font-family: var(--font-titles);
-  font-size: 0.75rem;
+  font-size: 1.25rem;
 }
 /* layout */
-
+.applicationbody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 /* application header */
 .container {
   padding: 5em 0;
@@ -61,12 +65,14 @@ h4 {
 
 /* drinks list */
 .drinksbody {
-  width: 80vw;
+  width: 60vw;
   margin: 0 auto;
   padding: 5em;
-  max-width: 500px;
+  max-width: 1100px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  align-items: center;
   gap: var(--gap-size);
 }
 .drink {
@@ -80,18 +86,20 @@ h4 {
 .drinkimage {
   display: block;
   width: 100%;
-  height: 250px;
+  height: 200px;
   display: block;
   object-fit: cover;
 }
 
 .drinkname {
+  margin: 1em;
   color: black;
   border-bottom: 2px dashed black;
   text-decoration: none;
   font-family: var(--font-titles);
+  text-align: center;
 }
 .drinkcategory {
   color: rgba(110, 110, 110, 0.654);
-  font-size: 0.65rem;
+  text-align: center;
 }
