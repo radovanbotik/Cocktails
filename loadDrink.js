@@ -1,8 +1,9 @@
 const loadDrink = drinksDOM => {
   drinksDOM.addEventListener("click", e => {
-    e.preventDefault();
     e.stopImmediatePropagation();
-    const targetsParent = e.target.closest("a");
+    const selecteddrinkID = e.target.closest("a").dataset.id;
+    localStorage.setItem("selecteddrink", selecteddrinkID);
+    console.log(targetsID);
   });
 };
 export { loadDrink };
