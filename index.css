@@ -1,5 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@400;500&family=Space+Mono&display=swap");
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+:root {
+  --font-titles: "Space Mono", monospace;
+  --font-main: "Bitter", serif;
+
+  --color-main: rgb(191, 191, 191);
+  --gap-size: 1em;
+}
+/* modifier classes */
+.hidden {
+  display: none;
+}
+/* general */
+body {
+  background-color: var(--color-main);
+  font-size: 62.5%;
+  font-family: var(--font-main);
+}
+img {
+  display: block;
+  object-fit: cover;
+}
+
+h1 {
+  font-family: var(--font-titles);
+  font-size: 2rem;
+}
+h2 {
+  font-family: var(--font-titles);
+  font-size: 1.5rem;
+}
+h4 {
+  font-family: var(--font-titles);
+  font-size: 0.75rem;
+}
+/* layout */
+
+/* application header */
+.container {
+  height: 100%;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* display: flex;
+  flex-direction: column; */
+}
+.drinksheader {
+  padding: 4em 0em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-size);
+  /* display: grid;
+  place-items: center; */
+}
+.searchform input {
+  padding: 0.5em 2em;
+  font-family: inherit;
+  text-align: center;
+}
+.drinksbody {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-size);
+  text-align: center;
+}
+.drinkslist {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-size);
+}
+.drink {
+  background-color: white;
+  border: 5px solid black;
+  display: block;
+  text-decoration: none;
+}
+.drinkdata {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.drinkimage {
+  width: 200px;
+  height: 200px;
+}
+.drinkname,
+.drinkcategory {
+  padding: 0.25em;
+}
+.drinkname {
+  color: black;
+  border-bottom: 2px dashed black;
+  text-decoration: none;
+  font-family: var(--font-titles);
+}
+.drinkcategory {
+  color: rgba(110, 110, 110, 0.654);
+  font-size: 0.65rem;
 }
