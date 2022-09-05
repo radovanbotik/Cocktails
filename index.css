@@ -92,7 +92,7 @@ h4 {
 }
 
 .drinkname {
-  margin: 1em;
+  padding: 1em;
   color: black;
   border-bottom: 2px dashed black;
   text-decoration: none;

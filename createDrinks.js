@@ -20,8 +20,8 @@ const createDrinks = ({ drinks }) => {
         strDrinkThumb: image,
       } = drink;
       return `
-      <a href="drink.html" class="drink">
-      <article class="drinkdata" data-id='${id}'>
+      <a href="drink.html" class="drink" data-id='${id}'>
+      <article class="drinkdata" >
         <img
           src="${image}"
           alt="${name}"

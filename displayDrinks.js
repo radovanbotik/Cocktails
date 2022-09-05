@@ -1,6 +1,7 @@
 import { fetchDrinks } from "./fetchDrinks.js";
 import { createDrinks } from "./createDrinks.js";
 import { getElement } from "./utility/getElement.js";
+import { loadDrink } from "./loadDrink.js";
 
 const bodyloader = getElement(".bodyloader");
 const bodyannouncer = getElement(".bodyannouncer");
@@ -13,7 +14,8 @@ const displayDrinks = async url => {
     bodyannouncer.classList.remove("hidden");
   } else {
     bodyannouncer.classList.add("hidden");
-    createDrinks(fetchedDrinks);
+    const drinksDOM = createDrinks(fetchedDrinks);
+    loadDrink(drinksDOM);
   }
 };
 
