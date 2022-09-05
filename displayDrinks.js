@@ -9,6 +9,7 @@ const drinksbody = getElement(".drinksbody");
 const displayDrinks = async url => {
   bodyloader.classList.remove("hidden");
   const fetchedDrinks = await fetchDrinks(url);
+  console.log(fetchedDrinks);
   if (fetchedDrinks) {
     //animation
     bodyloader.classList.add("hidden");
