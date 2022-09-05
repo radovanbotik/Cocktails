@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@400;500&family=Space+Mono&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --font-titles: "Space Mono", monospace;
+  --font-main: "Bitter", serif;
+
+  --color-main: rgb(191, 191, 191);
+  --gap-size: 1em;
+}
+/* modifier classes */
+.hidden {
+  display: none;
+}
+/* general */
+body {
+  background-color: var(--color-main);
+  font-size: 62.5%;
+  font-family: var(--font-main);
+}
+img {
+  display: block;
+  object-fit: cover;
+}
+
+h1 {
+  font-family: var(--font-titles);
+  font-size: 2rem;
+}
+h2 {
+  font-family: var(--font-titles);
+  font-size: 1.5rem;
+}
+h4 {
+  font-family: var(--font-titles);
+  font-size: 1.25rem;
+}
+/* layout */
+.applicationbody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* application header */
+.container {
+  padding: 5em 0;
+  position: relative;
+}
+.drinksheader {
+  padding: 4em 0em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-size);
+}
+.searchform input {
+  padding: 0.5em 2em;
+  font-family: inherit;
+  text-align: center;
+}
+
+.drinksbody {
+  width: 60vw;
+  margin: 0 auto;
+  padding: 5em;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-size);
+}
