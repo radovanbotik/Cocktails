@@ -1,12 +1,16 @@
-// import { getElement } from "./utility/getElement.js";
-// const searchform = getElement(".searchform");
-// const userinput = getElement("#userinput");
+import { getElement } from "./utility/getElement.js";
+import { displayDrinks } from "./displayDrinks.js";
 
-// const getUserInput = () => {
-//   searchform.addEventListener("change", e => {
-//     e.preventDefault();
-//     return userinput.value;
-//   });
-// };
+const searchform = getElement(".searchform");
+const userinput = getElement("#userinput");
 
-// export { getUserInput };
+const baseURL = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=`;
+
+searchform.addEventListener("keyup", e => {
+  e.preventDefault();
+  const usersearch = userinput.value;
+  if (!usersearch) {
+    return;
+  }
+  displayDrinks(`${baseURL}${usersearch}`);
+});

@@ -4,7 +4,8 @@ const fetchDrinks = async url => {
     const drinks = await resp.json();
     return drinks;
   } catch (error) {
-    throw new Error(error);
+    // throw new Error(error);
+    console.log(error);
   }
 };
 export { fetchDrinks };
