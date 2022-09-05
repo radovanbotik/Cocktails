@@ -10,7 +10,6 @@ const createDrinks = ({ drinks }) => {
     drinksbody.innerHTML = null;
     return;
   }
-  bodyloader.classList.add("hidden");
 
   const drinksString = drinks
     .map(drink => {
@@ -36,6 +35,7 @@ const createDrinks = ({ drinks }) => {
     })
     .join("");
   drinksbody.innerHTML = drinksString;
+  bodyloader.classList.add("hidden");
   return drinksbody;
 };
 
