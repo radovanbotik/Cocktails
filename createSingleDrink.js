@@ -1,6 +1,11 @@
 import { getElement } from "./utility/getElement.js";
+const bodyloader = getElement(".bodyloader");
 
 const createSingleDrink = drinkdata => {
+  if (drinkdata) {
+    bodyloader.classList.add("hidden");
+  }
+
   const { drinks } = drinkdata;
   const ingredientsArray = Object.keys(drinks[0]).filter(key => {
     return key.includes("strIngredient");

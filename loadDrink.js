@@ -1,5 +1,8 @@
 import { fetchDrinks } from "./fetchDrinks.js";
 import { createSingleDrink } from "./createSingleDrink.js";
+import { getElement } from "./utility/getElement.js";
+
+const bodyloader = getElement(".bodyloader");
 
 const loadDrink = drinksDOM => {
   drinksDOM.addEventListener("click", e => {
