@@ -27,6 +27,10 @@ img {
   object-fit: cover;
 }
 
+input:focus::placeholder {
+  color: transparent;
+}
+
 h1 {
   font-family: var(--font-titles);
   font-size: 2rem;
@@ -38,6 +42,9 @@ h2 {
 h4 {
   font-family: var(--font-titles);
   font-size: 1.25rem;
+}
+h5 {
+  font-size: 0.75rem;
 }
 /* layout */
 .applicationbody {
@@ -82,8 +89,7 @@ h4 {
   border: 1px solid black;
   border-radius: 5px;
 }
-.drinkdata {
-}
+
 .drinkimage {
   display: block;
   width: 100%;
@@ -93,14 +99,13 @@ h4 {
 }
 
 .drinkname {
-  padding: 1em;
   color: black;
-  border-bottom: 2px dashed black;
   text-decoration: none;
   font-family: var(--font-titles);
   text-align: center;
 }
 .drinkcategory {
   color: rgba(110, 110, 110, 0.654);
+  padding-bottom: 0.5em;
   text-align: center;
 }

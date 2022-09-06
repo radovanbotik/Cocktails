@@ -29,7 +29,7 @@ const createDrinks = ({ drinks }) => {
         />
       </article>
       <h4 class="drinkname">${name}</h4>
-      <h4 class="drinkcategory">${category}</h4>
+      <h5 class="drinkcategory">${category}</h5>
     </a>
     `;
     })
