@@ -10,7 +10,6 @@ const createSingleDrink = drinkdata => {
   const ingredientsArray = Object.keys(drinks[0]).filter(key => {
     return key.includes("strIngredient");
   });
-  console.log(ingredientsArray);
   const ingredients = ingredientsArray.map(ingredient => {
     return drinks[0][ingredient];
   });
